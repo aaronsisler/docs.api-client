@@ -1,0 +1,19 @@
+meta {
+  name: Update-Client-Tester
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{admin_duties_url}}/data/clients
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "clientId": "{{admin_duties_client_id}}",
+      "name": "Bob's Pizza",
+      "createdOn": "2023-08-01T11:14:25.318775"
+  }
+}

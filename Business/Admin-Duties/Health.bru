@@ -1,15 +1,17 @@
 meta {
   name: Health
   type: http
-  seq: 1
+  seq: 3
 }
 
 get {
   url: {{admin_duties_url}}/health
-  body: none
+  body: json
   auth: none
 }
 
-auth:bearer {
-  token: 
+body:json {
+  {
+      "taco": "panda"
+  }
 }

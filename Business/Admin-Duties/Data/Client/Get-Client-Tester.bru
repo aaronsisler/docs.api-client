@@ -1,0 +1,11 @@
+meta {
+  name: Get-Client-Tester
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{admin_duties_url}}/data/clients/{{admin_duties_client_id}}
+  body: none
+  auth: none
+}

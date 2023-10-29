@@ -1,0 +1,20 @@
+meta {
+  name: Update-Client-Tester
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{admin_duties_url}}/data/clients/{{admin_duties_client_id}}/locations
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "clientId": "{{admin_duties_client_id}}",
+      "locationId": "{{admin_duties_location_id}}",
+      "name": "Bob's Pizza House",
+      "createdOn": "2023-08-01T11:14:25.318775"
+  }
+}

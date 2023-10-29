@@ -1,0 +1,11 @@
+meta {
+  name: Get-Workshop-Tester
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{admin_duties_url}}/data/clients/{{admin_duties_client_id}}/workshops/{{admin_duties_workshop_id}}
+  body: none
+  auth: none
+}

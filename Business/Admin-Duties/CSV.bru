@@ -1,0 +1,19 @@
+meta {
+  name: CSV
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{admin_duties_url}}/csv
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "year": 2023,
+      "month": 10,
+      "clientId": "{{admin_duties_client_id_BK}}"
+  }
+}

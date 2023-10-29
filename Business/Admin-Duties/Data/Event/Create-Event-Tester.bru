@@ -1,0 +1,25 @@
+meta {
+  name: Create-Event-Tester
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{admin_duties_url}}/data/clients/{{admin_duties_client_id}}/events
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "clientId": "{{admin_duties_client_id}}",
+      "locationId": "{{admin_duties_location_id}}",
+      "organizerId": "{{admin_duties_organizer_id}}",
+      "name": "Learn to make a pizza",
+      "category": "Lessons",
+      "description": "We will learn to make pizza with our fine chefs!",
+      "dayOfWeek": "TUESDAY",
+      "startTime": "11:30:00",
+      "duration": 75
+  }
+}

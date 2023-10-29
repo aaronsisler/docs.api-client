@@ -1,0 +1,18 @@
+meta {
+  name: Create-Organizer-Tester
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{admin_duties_url}}/data/clients/{{admin_duties_client_id}}/organizers
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "clientId": "{{admin_duties_client_id}}",
+      "name": "Bob the Pizza Cooker"
+  }
+}

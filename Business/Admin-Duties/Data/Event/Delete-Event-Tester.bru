@@ -1,0 +1,11 @@
+meta {
+  name: Delete-Event-Tester
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{admin_duties_url}}/data/clients/{{admin_duties_client_id}}/events/{{admin_duties_event_id}}
+  body: none
+  auth: none
+}

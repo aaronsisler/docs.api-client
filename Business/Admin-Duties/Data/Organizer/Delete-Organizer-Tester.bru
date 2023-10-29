@@ -1,0 +1,11 @@
+meta {
+  name: Delete-Organizer-Tester
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{admin_duties_url}}/data/clients/{{admin_duties_client_id}}/organizers/{{admin_duties_organizer_id}}
+  body: none
+  auth: none
+}
