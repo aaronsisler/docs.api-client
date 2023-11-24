@@ -1,0 +1,11 @@
+meta {
+  name: Delete-Location
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{admin_duties_url}}/data/locations/{{events_admin_service_location_id}}
+  body: none
+  auth: none
+}

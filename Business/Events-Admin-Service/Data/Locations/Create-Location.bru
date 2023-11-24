@@ -1,0 +1,22 @@
+meta {
+  name: Create-Location
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{events_admin_service_url}}/data/locations
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "name": "John's Pizza"
+  }
+}
+
+vars:post-response {
+  events_admin_service_location_id: res("locationId")
+  events_admin_service_location_created_on: res("createdOn")
+}

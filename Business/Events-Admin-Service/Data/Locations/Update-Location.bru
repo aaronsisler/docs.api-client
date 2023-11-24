@@ -1,0 +1,21 @@
+meta {
+  name: Update-Location
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{events_admin_service_url}}/data/locations
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "clientId": "{{events_admin_service_client_id}}",
+    "locationId": "{{events_admin_service_location_id}}",
+    "createdOn": "{{events_admin_service_location_created_on}}",
+    "name": "Bob's Pizza"
+  }
+}
+
