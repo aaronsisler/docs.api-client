@@ -1,0 +1,18 @@
+meta {
+  name: Get-Organizer
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{events_admin_service_url}}/clients/{{events_admin_service_client_id}}/organizers/{{events_admin_service_organizer_id}}
+  body: none
+  auth: none
+}
+
+vars:pre-request {
+  events_admin_service_organizer_id: -update-organizer-organizer-id
+  events_admin_service_client_id: update-organizer-client-id
+  ~events_admin_service_organizer_id: -get-organizer-organizer-id
+  ~events_admin_service_client_id: get-organizer-client-id
+}

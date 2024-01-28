@@ -1,0 +1,23 @@
+meta {
+  name: Create-Organizer
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{events_admin_service_url}}/clients/{{events_admin_service_client_id}}/organizers
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "clientId": "{{events_admin_service_client_id}}}",
+    "name": "Owner of Bob's Pizza"
+  }
+}
+
+vars:post-response {
+  events_admin_service_organizer_id: res("organizerId")
+  events_admin_service_organizer_created_on: res("createdOn")
+}
