@@ -5,16 +5,20 @@ meta {
 }
 
 put {
-  url: {{events_admin_service_url}}/clients/{{events_admin_service_client_id}}/scheduled-events
+  url: {{events_admin_service_url}}/event-schedules/{{events_admin_service_event_schedule_id}}/scheduled-events
   body: json
   auth: none
 }
 
 body:json {
   {
-    "clientId": "{{events_admin_service_client_id}}",
-    "eventId": "{{events_admin_service_event_id}}",
-    "createdOn": "{{events_admin_service_event_created_on}}",
-    "name": "Bob's Pizza"
+    "eventScheduleId": "{{events_admin_service_event_schedule_id}}",
+    "scheduledEventId": "{{events_admin_service_scheduled_event_id}}",
+    "locationId": "{{events_admin_service_location_id}}",
+    "organizerIds": ["{{events_admin_service_organizer_id}}"],
+    "name": "Event name from API client",
+    "description":"Event description from API Client",
+    "category": "Event category from API Client",
+    "createdOn": "{{events_admin_service_event_created_on}}"
   }
 }

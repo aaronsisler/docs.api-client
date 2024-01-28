@@ -11,8 +11,8 @@ get {
 }
 
 vars:pre-request {
-  events_admin_service_location_id: -update-location-location-id
-  events_admin_service_client_id: update-location-client-id
+  ~events_admin_service_location_id: -update-location-location-id
+  ~events_admin_service_client_id: update-location-client-id
   ~events_admin_service_location_id: -get-location-location-id
   ~events_admin_service_client_id: get-location-client-id
 }

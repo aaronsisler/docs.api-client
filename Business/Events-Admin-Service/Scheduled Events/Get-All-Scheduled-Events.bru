@@ -5,13 +5,11 @@ meta {
 }
 
 get {
-  url: {{events_admin_service_url}}/clients/{{events_admin_service_client_id}}/scheduled-events
+  url: {{events_admin_service_url}}/event-schedules/{{events_admin_service_event_schedule_id}}/scheduled-events
   body: none
   auth: none
 }
 
 vars:pre-request {
-  events_admin_service_location_id: 75d07a82-fab8-4aca-8a63-2e1167f5443e
-  events_admin_service_client_id: create-location-mock-client-id
-  ~events_admin_service_client_id: get-location-mock-location-client-id
+  events_admin_service_event_schedule_id: get-scheduled-event-event-schedule-id
 }

@@ -5,7 +5,12 @@ meta {
 }
 
 delete {
-  url: {{events_admin_service_url}}/clients/{{events_admin_service_client_id}}/scheduled-events/{{events_admin_service_event_id}}
+  url: {{events_admin_service_url}}/event-schedules/{{events_admin_service_event_schedule_id}}/scheduled-events/{{events_admin_service_scheduled_event_id}}
   body: none
   auth: none
+}
+
+vars:pre-request {
+  ~events_admin_service_scheduled_event_id: 
+  ~events_admin_service_event_schedule_id: 
 }
