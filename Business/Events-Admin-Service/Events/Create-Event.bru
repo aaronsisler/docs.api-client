@@ -20,6 +20,12 @@ body:json {
   }
 }
 
+vars:pre-request {
+  ~events_admin_service_client_id: 
+  ~events_admin_service_location_id: 
+  ~events_admin_service_organizer_id: 
+}
+
 vars:post-response {
   events_admin_service_event_id: res("eventId")
   events_admin_service_event_created_on: res("createdOn")
