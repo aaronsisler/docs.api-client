@@ -1,0 +1,26 @@
+meta {
+  name: Create-Event
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{events_admin_service_url}}/clients/{{events_admin_service_client_id}}/events
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "clientId": "{{events_admin_service_client_id}}}",
+    "locationId": "{{events_admin_service_location_id}}",
+    "organizerIds": ["{{events_admin_service_organizer_id}}"],
+    "description":"Event description from API Client",
+    "category": "Event category from API Client"
+  }
+}
+
+vars:post-response {
+  events_admin_service_event_id: res("eventId")
+  events_admin_service_event_created_on: res("createdOn")
+}
