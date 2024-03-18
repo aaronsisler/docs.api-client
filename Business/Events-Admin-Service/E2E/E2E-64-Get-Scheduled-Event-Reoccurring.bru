@@ -1,0 +1,11 @@
+meta {
+  name: E2E-64-Get-Scheduled-Event-Reoccurring
+  type: http
+  seq: 64
+}
+
+get {
+  url: {{events_admin_service_url}}/event-schedules/{{events_admin_service_e2e_event_schedule_id}}/scheduled-events/{{events_admin_service_e2e_scheduled_event_id_reoccurring}}
+  body: none
+  auth: none
+}

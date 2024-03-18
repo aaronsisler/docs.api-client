@@ -1,0 +1,11 @@
+meta {
+  name: E2E-31-Get-Organizer
+  type: http
+  seq: 31
+}
+
+get {
+  url: {{events_admin_service_url}}/clients/{{events_admin_service_e2e_client_id}}/organizers/{{events_admin_service_e2e_organizer_id}}
+  body: none
+  auth: none
+}

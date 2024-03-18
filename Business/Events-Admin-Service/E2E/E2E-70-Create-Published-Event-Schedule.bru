@@ -1,0 +1,28 @@
+meta {
+  name: E2E-Create-Published-Event-Schedule
+  type: http
+  seq: 70
+}
+
+post {
+  url: {{events_admin_service_url}}/clients/{{events_admin_service_e2e_client_id}}/published-event-schedules
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "clientId": "{{events_admin_service_e2e_client_id}}",
+    "name": "2024-02 Published Event Schedule",
+    "eventScheduleYear": {{events_admin_service_e2e_published_event_schedule_year}},
+    "eventScheduleMonth": {{events_admin_service_e2e_published_event_schedule_month}},
+    "eventScheduleId": "{{events_admin_service_e2e_event_schedule_id}}",
+    "locationBlackouts": [],
+    "eventBlackouts": []
+  }
+}
+
+vars:post-response {
+  events_admin_service_e2e_published_event_schedule_id: res("publishedEventScheduleId")
+  events_admin_service_e2e_published_event_schedule_created_on: res("createdOn")
+}

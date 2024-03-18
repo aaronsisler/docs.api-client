@@ -1,0 +1,11 @@
+meta {
+  name: E2E-11-Get-Client
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{events_admin_service_url}}/clients/{{events_admin_service_e2e_client_id}}
+  body: none
+  auth: none
+}

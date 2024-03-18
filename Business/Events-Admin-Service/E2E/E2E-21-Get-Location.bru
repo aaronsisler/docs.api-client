@@ -1,0 +1,11 @@
+meta {
+  name: E2E-21-Get-Location
+  type: http
+  seq: 21
+}
+
+get {
+  url: {{events_admin_service_url}}/clients/{{events_admin_service_e2e_client_id}}/locations/{{events_admin_service_e2e_location_id}}
+  body: none
+  auth: none
+}

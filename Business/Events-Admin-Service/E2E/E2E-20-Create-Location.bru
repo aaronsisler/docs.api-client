@@ -1,0 +1,23 @@
+meta {
+  name: E2E-20-Create-Location
+  type: http
+  seq: 20
+}
+
+post {
+  url: {{events_admin_service_url}}/clients/{{events_admin_service_e2e_client_id}}/locations
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "clientId": "{{events_admin_service_e2e_client_id}}",
+    "name": "John's Pizza"
+  }
+}
+
+vars:post-response {
+  events_admin_service_e2e_location_id: res("locationId")
+  events_admin_service_e2e_location_created_on: res("createdOn")
+}

@@ -1,0 +1,16 @@
+meta {
+  name: E2E-00-Data-Setup
+  type: http
+  seq: 0
+}
+
+get {
+  url: {{events_admin_service_url}}/health
+  body: none
+  auth: none
+}
+
+vars:pre-request {
+  events_admin_service_e2e_published_event_schedule_year: 2024
+  events_admin_service_e2e_published_event_schedule_month: 02
+}
