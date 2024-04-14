@@ -1,0 +1,11 @@
+meta {
+  name: BK-64-Get-Scheduled-Event-Reoccurring
+  type: http
+  seq: 64
+}
+
+get {
+  url: {{events_admin_service_url}}/event-schedules/{{events_admin_service_bk_event_schedule_id}}/scheduled-events/{{events_admin_service_bk_scheduled_event_id_reoccurring}}
+  body: none
+  auth: none
+}

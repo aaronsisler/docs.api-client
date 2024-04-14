@@ -1,0 +1,22 @@
+meta {
+  name: BK-10-Create-Client
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{events_admin_service_url}}/clients
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "name": "Body Kinect"
+  }
+}
+
+vars:post-response {
+  events_admin_service_bk_client_id: res("clientId")
+  events_admin_service_bk_client_created_on: res("createdOn")
+}

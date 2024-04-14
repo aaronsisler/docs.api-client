@@ -1,0 +1,11 @@
+meta {
+  name: BK-21-Get-Location
+  type: http
+  seq: 21
+}
+
+get {
+  url: {{events_admin_service_url}}/clients/{{events_admin_service_bk_client_id}}/locations/{{events_admin_service_bk_location_id}}
+  body: none
+  auth: none
+}

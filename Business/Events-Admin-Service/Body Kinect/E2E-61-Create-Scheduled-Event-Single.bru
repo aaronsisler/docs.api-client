@@ -1,0 +1,34 @@
+meta {
+  name: BK-61-Create-Scheduled-Event-Single
+  type: http
+  seq: 61
+}
+
+post {
+  url: {{events_admin_service_url}}/event-schedules/{{events_admin_service_bk_event_schedule_id}}/scheduled-events
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "eventScheduleId": "{{events_admin_service_bk_event_schedule_id}}",
+    "clientId": "{{events_admin_service_bk_client_id}}",
+    "eventId": "{{events_admin_service_bk_event_id}}",
+    "locationId": "{{events_admin_service_bk_location_id}}",
+    "organizerId": "{{events_admin_service_bk_organizer_id}}",
+    "scheduledEventType": "SINGLE",
+    "scheduledEventDate": "{{events_admin_service_bk_published_event_schedule_year}}-0{{events_admin_service_bk_published_event_schedule_month}}-14",
+    "name": "Event name from API client",
+    "description": "Event description from API Client",
+    "category": "Event category from API Client",
+    "startTime": "13:45:42",
+    "endTime": "20:30:25",
+    "cost": 550
+  }
+}
+
+vars:post-response {
+  events_admin_service_bk_scheduled_event_id_single: res("scheduledEventId")
+  events_admin_service_bk_scheduled_event_created_on_single: res("createdOn")
+}

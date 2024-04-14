@@ -1,0 +1,11 @@
+meta {
+  name: BK-Get-Published-Event-Schedule
+  type: http
+  seq: 71
+}
+
+get {
+  url: {{events_admin_service_url}}/clients/{{events_admin_service_bk_client_id}}/published-event-schedules/{{events_admin_service_bk_published_event_schedule_id}}
+  body: none
+  auth: none
+}

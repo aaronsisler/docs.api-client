@@ -1,0 +1,23 @@
+meta {
+  name: BK-20-Create-Location
+  type: http
+  seq: 20
+}
+
+post {
+  url: {{events_admin_service_url}}/clients/{{events_admin_service_bk_client_id}}/locations
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "clientId": "{{events_admin_service_bk_client_id}}",
+    "name": "Body Kinect Wellness Center"
+  }
+}
+
+vars:post-response {
+  events_admin_service_bk_location_id: res("locationId")
+  events_admin_service_bk_location_created_on: res("createdOn")
+}
