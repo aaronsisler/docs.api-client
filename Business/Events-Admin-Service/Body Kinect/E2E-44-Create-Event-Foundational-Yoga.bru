@@ -1,0 +1,25 @@
+meta {
+  name: BK-44-Create-Event-Foundational-Yoga
+  type: http
+  seq: 44
+}
+
+post {
+  url: {{events_admin_service_url}}/clients/{{events_admin_service_bk_client_id}}/events
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "clientId": "{{events_admin_service_bk_client_id}}",
+    "locationId": "{{events_admin_service_bk_location_id}}",
+    "name": "Foundational Yoga",
+    "description":"This class is appropriate for beginners and advanced yogis who want to assure they are learning yoga that aligns with the physical. mental and emotional bodies within themselves. Come learn from the ground up what the asanas feel like within your body. Our instructor will guide you throughout the class.",
+    "category": "Yoga"
+  }
+}
+
+vars:post-response {
+  events_admin_service_bk_event_id_44: res("eventId")
+}

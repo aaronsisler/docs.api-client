@@ -1,0 +1,28 @@
+meta {
+  name: E2E-65-Create-Scheduled-Event-Yin-Yoga
+  type: http
+  seq: 65
+}
+
+post {
+  url: {{events_admin_service_url}}/event-schedules/{{events_admin_service_bk_event_schedule_id}}/scheduled-events
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "eventScheduleId": "{{events_admin_service_bk_event_schedule_id}}",
+    "clientId": "{{events_admin_service_bk_client_id}}",
+    "eventId": "{{events_admin_service_bk_event_id_45}}",
+    "locationId": "{{events_admin_service_bk_location_id}}",
+    "scheduledEventType": "REOCCURRING",
+    "scheduledEventInterval": "WEEKLY",
+    "scheduledEventDay": "WEDNESDAY",
+    "name": "Yin Yoga",
+    "description":"Yin Yoga is a practice that is suitable for anyone who wants to go deeper into their stretch and soft tissue. Works on the meridian system to help balance out health and well being while going deeper into your own practice.",
+    "category": "Yoga",
+    "startTime": "18:15:00",
+    "endTime": "19:15:00"
+  }
+}

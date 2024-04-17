@@ -1,0 +1,28 @@
+meta {
+  name: E2E-63-Create-Scheduled-Event-Vinyassa-Everybody
+  type: http
+  seq: 63
+}
+
+post {
+  url: {{events_admin_service_url}}/event-schedules/{{events_admin_service_bk_event_schedule_id}}/scheduled-events
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "eventScheduleId": "{{events_admin_service_bk_event_schedule_id}}",
+    "clientId": "{{events_admin_service_bk_client_id}}",
+    "eventId": "{{events_admin_service_bk_event_id_43}}",
+    "locationId": "{{events_admin_service_bk_location_id}}",
+    "scheduledEventType": "REOCCURRING",
+    "scheduledEventInterval": "WEEKLY",
+    "scheduledEventDay": "MONDAY",
+    "name": "Vinyasa for everybody",
+    "description":"This class is suitable for everybody. Movement is so important for our bodies. Movement increases our metabolism, works on our immune system, stretches our fascia and muscles. Learn asanas and put them together with breath and movement for a full body experience.",
+    "category": "Wellness Center",
+    "startTime": "17:30:00",
+    "endTime": "18:30:00"
+  }
+}

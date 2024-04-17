@@ -1,0 +1,23 @@
+meta {
+  name: BK-31-Create-Organizer-Tami
+  type: http
+  seq: 31
+}
+
+post {
+  url: {{events_admin_service_url}}/clients/{{events_admin_service_bk_client_id}}/organizers
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "clientId": "{{events_admin_service_bk_client_id}}",
+    "name": "Tami Richards"
+  }
+}
+
+vars:post-response {
+  events_admin_service_bk_organizer_id_tami: res("organizerId")
+  events_admin_service_bk_organizer_created_on: res("createdOn")
+}

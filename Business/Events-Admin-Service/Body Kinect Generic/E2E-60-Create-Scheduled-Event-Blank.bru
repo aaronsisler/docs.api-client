@@ -1,7 +1,7 @@
 meta {
-  name: BK-62-Create-Scheduled-Event-Reoccurring
+  name: E2E-60-Create-Scheduled-Event-Reoccurring
   type: http
-  seq: 62
+  seq: 60
 }
 
 post {
@@ -16,19 +16,16 @@ body:json {
     "clientId": "{{events_admin_service_bk_client_id}}",
     "eventId": "{{events_admin_service_bk_event_id}}",
     "locationId": "{{events_admin_service_bk_location_id}}",
-    "organizerId": "{{events_admin_service_bk_organizer_id}}",
     "scheduledEventType": "REOCCURRING",
-    "scheduledEventInterval": "WEEKENDS",
-    "name": "Event name from API client",
-    "description": "Event description from API Client",
-    "category": "Event category from API Client",
+    "scheduledEventDay": "MON",
+    "name": "",
+    "description":"",
+    "category": ""
     "startTime": "13:45:42",
-    "endTime": "20:30:25",
-    "cost": 550
+    "endTime": "20:30:25"
   }
 }
 
 vars:post-response {
-  events_admin_service_bk_scheduled_event_id_reoccurring: res("scheduledEventId")
-  events_admin_service_bk_scheduled_event_created_on_reoccuring: res("createdOn")
+  events_admin_service_bk_scheduled_event_id_60: res("scheduledEventId")
 }

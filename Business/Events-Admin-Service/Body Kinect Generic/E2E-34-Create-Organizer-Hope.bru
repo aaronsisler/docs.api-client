@@ -1,0 +1,23 @@
+meta {
+  name: BK-34-Create-Organizer-Hope
+  type: http
+  seq: 34
+}
+
+post {
+  url: {{events_admin_service_url}}/clients/{{events_admin_service_bk_client_id}}/organizers
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "clientId": "{{events_admin_service_bk_client_id}}",
+    "name": "Hope Ashby"
+  }
+}
+
+vars:post-response {
+  events_admin_service_bk_organizer_id_hope: res("organizerId")
+  events_admin_service_bk_organizer_created_on: res("createdOn")
+}

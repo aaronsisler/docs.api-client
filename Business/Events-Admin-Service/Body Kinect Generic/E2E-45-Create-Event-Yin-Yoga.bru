@@ -1,0 +1,25 @@
+meta {
+  name: BK-45-Create-Event-Yin-Yoga
+  type: http
+  seq: 45
+}
+
+post {
+  url: {{events_admin_service_url}}/clients/{{events_admin_service_bk_client_id}}/events
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "clientId": "{{events_admin_service_bk_client_id}}",
+    "locationId": "{{events_admin_service_bk_location_id}}",
+    "name": "Yin Yoga",
+    "description":"Yin Yoga is a practice that is suitable for anyone who wants to go deeper into their stretch and soft tissue. Works on the meridian system to help balance out health and well being while going deeper into your own practice.",
+    "category": "Yoga"
+  }
+}
+
+vars:post-response {
+  events_admin_service_bk_event_id_45: res("eventId")
+}
