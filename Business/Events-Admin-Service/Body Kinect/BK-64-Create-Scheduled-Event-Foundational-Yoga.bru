@@ -1,0 +1,28 @@
+meta {
+  name: BK-64-Create-Scheduled-Event-Foundational-Yoga
+  type: http
+  seq: 64
+}
+
+post {
+  url: {{events_admin_service_url}}/event-schedules/{{events_admin_service_bk_event_schedule_id}}/scheduled-events
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "eventScheduleId": "{{events_admin_service_bk_event_schedule_id}}",
+    "clientId": "{{events_admin_service_bk_client_id}}",
+    "eventId": "{{events_admin_service_bk_event_id_44}}",
+    "locationId": "{{events_admin_service_bk_location_id}}",
+    "scheduledEventType": "REOCCURRING",
+    "scheduledEventInterval": "WEEKLY",
+    "scheduledEventDay": "WEDNESDAY",
+    "name": "Foundational Yoga",
+    "description":"This class is appropriate for beginners and advanced yogis who want to assure they are learning yoga that aligns with the physical. mental and emotional bodies within themselves. Come learn from the ground up what the asanas feel like within your body. Our instructor will guide you throughout the class.",
+    "category": "Yoga",
+    "startTime": "09:00:00",
+    "endTime": "10:00:00"
+  }
+}
