@@ -1,0 +1,16 @@
+meta {
+  name: Get-File
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{events_admin_service_url}}/clients/{{events_admin_service_client_id}}/files/{{events_admin_service_filename}}
+  body: none
+  auth: none
+}
+
+vars:pre-request {
+  events_admin_service_filename: 2024-05-05T14:46:19.797890
+  events_admin_service_client_id: 34b4d680-ed71-4e0d-ba08-415c3e82c593
+}
