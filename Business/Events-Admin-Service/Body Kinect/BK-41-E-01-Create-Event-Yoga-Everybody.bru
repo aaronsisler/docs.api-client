@@ -1,7 +1,7 @@
 meta {
-  name: BK-48-Create-Event-Body-Wisdom
+  name: BK-41-Create-Event-Yoga-Everybody
   type: http
-  seq: 48
+  seq: 41.01
 }
 
 post {
@@ -14,12 +14,12 @@ body:json {
   {
     "clientId": "{{events_admin_service_bk_client_id}}",
     "locationId": "{{events_admin_service_bk_location_id}}",
-    "name": "Body Wisdom",
-    "description":"",
-    "category": ""
+    "name": "Yoga for everybody",
+    "description":"Our class is suitable for all yoga levels and for all ages. Come move, stretch, balance, relax and have fun.",
+    "category": "Yoga"
   }
 }
 
 vars:post-response {
-  events_admin_service_bk_event_id_body_wisdome: res("eventId")
+  events_admin_service_bk_event_id_41: res("eventId")
 }

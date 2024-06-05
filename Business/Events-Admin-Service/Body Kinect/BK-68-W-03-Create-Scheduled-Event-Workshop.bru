@@ -1,7 +1,7 @@
 meta {
-  name: BK-68-Create-Scheduled-Event-Book-Club
+  name: BK-68-W-03-Create-Scheduled-Event-Workshop
   type: http
-  seq: 68
+  seq: 68.03
 }
 
 post {
@@ -14,14 +14,15 @@ body:json {
   {
     "eventScheduleId": "{{events_admin_service_bk_event_schedule_id}}",
     "clientId": "{{events_admin_service_bk_client_id}}",
-    "eventId": "{{events_admin_service_bk_event_id_book_club}}",
+    "eventId": "{{events_admin_service_bk_event_id_body_wisdom_meetup}}",
     "locationId": "{{events_admin_service_bk_location_id}}",
     "scheduledEventType": "SINGLE",
-    "name": "Book Club",
+    "name": "Body Wisdom Meetup",
     "description":"",
-    "category": "Book Club",
-    "scheduledEventDate": "2024-05-02",
-    "startTime": "16:00:00",
-    "endTime": "17:00:00"
+    "category": "Workshop",
+    "scheduledEventDate": "2024-06-30",
+    "startTime": "10:00:00",
+    "endTime": "11:00:00",
+    "cost": 1000
   }
 }
