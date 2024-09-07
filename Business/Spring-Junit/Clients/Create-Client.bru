@@ -1,0 +1,27 @@
+meta {
+  name: Create-Client
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{spring_junit_service_url}}/clients
+  body: json
+  auth: none
+}
+
+body:json {
+  [
+    {
+      "name": "John's Pizza"
+    },
+    {
+      "name": "Bob's Pizza"
+    }
+  ]
+}
+
+vars:post-response {
+  events_admin_service_client_id: res("clientId")
+  events_admin_service_client_created_on: res("createdOn")
+}
