@@ -1,7 +1,7 @@
 meta {
-  name: BK-42-W-03-Create-Event-Body-Wisdom-Meetup
+  name: BK-42-W-08-Create-Event-Line-Dancing
   type: http
-  seq: 42.03
+  seq: 42.08
 }
 
 post {
@@ -14,12 +14,12 @@ body:json {
   {
     "clientId": "{{events_admin_service_bk_client_id}}",
     "locationId": "{{events_admin_service_bk_location_id}}",
-    "name": "Body Wisdom Meetup",
-    "description":"",
-    "category": ""
+    "name": "Line Dancing",
+    "description": "",
+    "category": "Workshop"
   }
 }
 
 vars:post-response {
-  events_admin_service_bk_event_id_body_wisdom_meetup: res("eventId")
+  events_admin_service_bk_event_id_line_dancing: res("eventId")
 }

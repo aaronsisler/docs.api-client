@@ -1,7 +1,7 @@
 meta {
-  name: BK-42-W-04-Create-Event-Body-Wisdom
+  name: BK-48-W-07-Create-Event-Womens-Circle
   type: http
-  seq: 42.04
+  seq: 42.07
 }
 
 post {
@@ -14,12 +14,12 @@ body:json {
   {
     "clientId": "{{events_admin_service_bk_client_id}}",
     "locationId": "{{events_admin_service_bk_location_id}}",
-    "name": "Sound Bath",
+    "name": "Women's Circle",
     "description": "",
     "category": "Workshop"
   }
 }
 
 vars:post-response {
-  events_admin_service_bk_event_id_body_wisdom: res("eventId")
+  events_admin_service_bk_event_id_womens_circle: res("eventId")
 }
