@@ -1,0 +1,11 @@
+meta {
+  name: Get-All-Events
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{events_admin_service_url}}/clients/{{events_admin_service_client_id}}/events
+  body: none
+  auth: none
+}

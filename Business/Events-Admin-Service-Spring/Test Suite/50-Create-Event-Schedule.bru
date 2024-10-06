@@ -1,0 +1,25 @@
+meta {
+  name: 50-Create-Event-Schedule
+  type: http
+  seq: 50
+}
+
+post {
+  url: {{events_admin_service_url}}/clients/{{events_admin_service_client_id}}/event-schedules
+  body: json
+  auth: none
+}
+
+body:json {
+  [
+    {
+      "clientId": "{{events_admin_service_client_id}}",
+      "name": "Event Schedule: 2024 Oct",
+      "description": "Description for Event Schedule"
+    }
+  ]
+}
+
+vars:post-response {
+  events_admin_service_event_schedule_id: res("eventScheduleId")[0]
+}

@@ -1,0 +1,20 @@
+meta {
+  name: Get-Organizer
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{events_admin_service_url}}/clients/{{events_admin_service_client_id}}/organizers/{{events_admin_service_organizer_id}}
+  body: none
+  auth: none
+}
+
+vars:pre-request {
+  events_admin_service_client_id: e3ea88b7-af9c-4409-bc83-0027b50f3692
+  events_admin_service_organizer_id: 456f9620-f5b6-497a-abf8-9716594eee21
+  ~events_admin_service_organizer_id: -update-organizer-organizer-id
+  ~events_admin_service_client_id: update-organizer-client-id
+  ~events_admin_service_organizer_id: -get-organizer-organizer-id
+  ~events_admin_service_client_id: get-organizer-client-id
+}

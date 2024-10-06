@@ -1,0 +1,11 @@
+meta {
+  name: Get-All-Organizers
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{events_admin_service_url}}/clients/{{events_admin_service_client_id}}/organizers
+  body: none
+  auth: none
+}

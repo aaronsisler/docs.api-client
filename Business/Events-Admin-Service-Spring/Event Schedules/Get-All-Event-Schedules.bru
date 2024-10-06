@@ -1,0 +1,11 @@
+meta {
+  name: Get-All-Event-Schedules
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{events_admin_service_url}}/clients/{{events_admin_service_client_id}}/event-schedules
+  body: none
+  auth: none
+}

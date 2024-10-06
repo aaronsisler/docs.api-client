@@ -1,0 +1,24 @@
+meta {
+  name: Update-Event
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{events_admin_service_url}}/clients/{{events_admin_service_client_id}}/events
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "clientId": "{{events_admin_service_client_id}}",
+    "eventId": "{{events_admin_service_event_id}}",
+    "locationId": "{{events_admin_service_location_id}}",
+    "organizerIds": ["{{events_admin_service_organizer_id}}"],
+    "name": "Event name from API client",
+    "description":"Event description from API Client",
+    "category": "Event category from API Client",
+    "createdOn": "{{events_admin_service_event_created_on}}"
+  }
+}

@@ -1,0 +1,26 @@
+meta {
+  name: Update-Event-Schedule
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{events_admin_service_url}}/clients/{{events_admin_service_client_id}}/event-schedules
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "clientId": "{{events_admin_service_client_id}}",
+    "eventScheduleId": "{{events_admin_service_event_schedule_id}}",
+    "createdOn": "{{events_admin_service_event_schedule_created_on}}",
+    "name": "Bob's Pizza"
+  }
+}
+
+vars:pre-request {
+  events_admin_service_event_schedule_created_on: 2023-07-05T01:02:34
+  events_admin_service_event_schedule_id: -update-event-schedule-event-schedule-id
+  events_admin_service_client_id: update-event-schedule-client-id
+}
