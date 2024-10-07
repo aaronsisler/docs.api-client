@@ -1,0 +1,11 @@
+meta {
+  name: 81-Get-File
+  type: http
+  seq: 81
+}
+
+get {
+  url: {{events_admin_service_url}}/clients/{{events_admin_service_client_id}}/files/{{events_admin_service_filename}}
+  body: none
+  auth: none
+}

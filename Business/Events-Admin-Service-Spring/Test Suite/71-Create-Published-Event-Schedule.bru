@@ -1,0 +1,26 @@
+meta {
+  name: 71-Create-Published-Event-Schedule
+  type: http
+  seq: 71
+}
+
+post {
+  url: {{events_admin_service_url}}/clients/{{events_admin_service_client_id}}/published-event-schedules
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "clientId": "{{events_admin_service_client_id}}",
+    "eventScheduleId": "{{events_admin_service_event_schedule_id}}",
+    "name": "Published Event Schedule",
+    "eventScheduleYear": {{events_admin_service_published_event_schedule_year}},
+    "eventScheduleMonth": {{events_admin_service_published_event_schedule_month}}
+  }
+}
+
+vars:post-response {
+  events_admin_service_published_event_schedule_id: res("publishedEventScheduleId")
+  events_admin_service_filename: res("filename")
+}

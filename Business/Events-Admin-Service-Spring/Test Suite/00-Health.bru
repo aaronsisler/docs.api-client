@@ -1,0 +1,16 @@
+meta {
+  name: 00-Health
+  type: http
+  seq: 00
+}
+
+get {
+  url: {{events_admin_service_url}}/actuator/health
+  body: none
+  auth: none
+}
+
+vars:pre-request {
+  events_admin_service_published_event_schedule_year: 2024
+  events_admin_service_published_event_schedule_month: 12
+}

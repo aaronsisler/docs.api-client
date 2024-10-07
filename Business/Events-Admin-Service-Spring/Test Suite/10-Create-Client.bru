@@ -1,7 +1,7 @@
 meta {
   name: 10-Create-Client
   type: http
-  seq: 10
+  seq: 1
 }
 
 post {
@@ -20,5 +20,4 @@ body:json {
 
 vars:post-response {
   events_admin_service_client_id: res("clientId")[0]
-  events_admin_service_client_created_on: res("createdOn")[0]
 }
