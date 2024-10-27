@@ -1,0 +1,22 @@
+meta {
+  name: Update-User
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{events_admin_service_url}}/users
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "userId": "{{events_admin_service_user_id}}",
+    "name": "Aaron Sisler",
+    "clientIds": [
+      "{{events_admin_service_client_id}}"
+    ],
+    "createdOn": "{{events_admin_service_created_on}}"
+  }
+}

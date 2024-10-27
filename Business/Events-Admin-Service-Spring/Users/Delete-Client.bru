@@ -1,0 +1,11 @@
+meta {
+  name: Delete-Client
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{admin_duties_url}}/users/{{events_admin_service_user_id}}
+  body: none
+  auth: none
+}

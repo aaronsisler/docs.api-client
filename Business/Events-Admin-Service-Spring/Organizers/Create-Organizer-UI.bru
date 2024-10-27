@@ -1,0 +1,32 @@
+meta {
+  name: Create-Organizer-UI
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{events_admin_service_url}}/clients/{{events_admin_service_client_id}}/organizers
+  body: json
+  auth: none
+}
+
+body:json {
+  [
+    {
+      "clientId": "{{events_admin_service_client_id}}",
+      "name": "Owner of Bob's Pizza"
+    },
+    {
+      "clientId": "{{events_admin_service_client_id}}",
+      "name": "Wife of Owner of Bob's Pizza"
+    }
+  ]
+}
+
+vars:pre-request {
+  events_admin_service_client_id: 918106e4-4dd5-4fcc-8c22-4e54e2d69bbc
+}
+
+vars:post-response {
+  events_admin_service_organizer_id: res("organizerId")[0]
+}
