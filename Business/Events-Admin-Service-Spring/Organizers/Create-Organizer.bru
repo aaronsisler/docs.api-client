@@ -23,6 +23,10 @@ body:json {
   ]
 }
 
+vars:pre-request {
+  events_admin_service_client_id: base-client-id
+}
+
 vars:post-response {
   events_admin_service_organizer_id: res("organizerId")[0]
 }
