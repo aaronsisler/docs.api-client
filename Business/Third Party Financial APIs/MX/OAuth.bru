@@ -1,0 +1,20 @@
+meta {
+  name: OAuth
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{mx_api}}/users
+  body: none
+  auth: basic
+}
+
+headers {
+  Accept: application/vnd.mx.api.v1+json
+}
+
+auth:basic {
+  username: {{MX_CLIENT_ID}}
+  password: {{MX_API_KEY}}
+}
