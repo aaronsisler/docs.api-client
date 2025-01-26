@@ -1,0 +1,24 @@
+meta {
+  name: Users-Members
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{mx_api}}/users/{{user_guid}}/members
+  body: none
+  auth: basic
+}
+
+headers {
+  Accept: application/vnd.mx.api.v1+json
+}
+
+auth:basic {
+  username: {{MX_CLIENT_ID}}
+  password: {{MX_API_KEY}}
+}
+
+vars:post-response {
+  member_guid: res("members")[0]["guid"]
+}

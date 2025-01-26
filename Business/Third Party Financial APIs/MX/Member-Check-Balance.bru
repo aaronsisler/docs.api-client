@@ -1,0 +1,28 @@
+meta {
+  name: Member-Check-Balance
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{mx_api}}/users/{{user_guid}}/members/{{member_guid}}/check_balance
+  body: none
+  auth: basic
+}
+
+headers {
+  Accept: application/vnd.mx.api.v1+json
+}
+
+auth:basic {
+  username: {{MX_CLIENT_ID}}
+  password: {{MX_API_KEY}}
+}
+
+body:json {
+  {
+    "widget_url": {
+      "widget_type": "connect_widget"
+    }
+  }
+}

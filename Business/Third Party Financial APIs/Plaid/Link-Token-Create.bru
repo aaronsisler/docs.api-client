@@ -1,0 +1,11 @@
+meta {
+  name: Link-Token-Create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{plaid_api}}/link/token/create
+  body: json
+  auth: none
+}

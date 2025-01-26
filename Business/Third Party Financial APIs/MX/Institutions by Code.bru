@@ -1,0 +1,25 @@
+meta {
+  name: Institutions by Code
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{mx_api}}/institutions/{{institution_code}}
+  body: none
+  auth: basic
+}
+
+headers {
+  Accept: application/vnd.mx.api.v1+json
+}
+
+auth:basic {
+  username: {{MX_CLIENT_ID}}
+  password: {{MX_API_KEY}}
+}
+
+vars:pre-request {
+  institution_code: amex
+  ~institution_code: citibank
+}

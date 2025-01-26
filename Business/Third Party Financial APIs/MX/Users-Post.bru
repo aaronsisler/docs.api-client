@@ -1,12 +1,12 @@
 meta {
-  name: OAuth
+  name: Users-Post
   type: http
-  seq: 1
+  seq: 2
 }
 
-get {
+post {
   url: {{mx_api}}/users
-  body: none
+  body: json
   auth: basic
 }
 
@@ -17,4 +17,12 @@ headers {
 auth:basic {
   username: {{MX_CLIENT_ID}}
   password: {{MX_API_KEY}}
+}
+
+body:json {
+  {
+    "user": {
+      "email": "aaron.sisler@eandbsolutions.com"
+    }
+  }
 }
