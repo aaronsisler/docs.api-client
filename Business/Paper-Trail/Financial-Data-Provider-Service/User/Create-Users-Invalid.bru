@@ -1,0 +1,26 @@
+meta {
+  name: Create-Users-Invalid
+  type: http
+  seq: 22
+}
+
+post {
+  url: {{financial_data_provider_service_url}}/users
+  body: json
+  auth: none
+}
+
+body:json {
+  [
+    {
+      "1username": "new_1_user_1",
+      "firstName": "new_1",
+      "lastName": "user_1"
+    },
+    {
+      "1username": "new_1_user_1",
+      "firstName": "new_1",
+      "lastName": "user_1"
+    }
+  ]
+}

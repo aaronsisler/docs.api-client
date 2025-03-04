@@ -1,0 +1,21 @@
+meta {
+  name: Create-Users-Populated-Id
+  type: http
+  seq: 23
+}
+
+post {
+  url: {{financial_data_provider_service_url}}/users
+  body: json
+  auth: none
+}
+
+body:json {
+  [
+    {
+      "username": "rawr_OVERRIDE_RUDE!!",
+      "firstName": "new_1",
+      "lastName": "user_1"
+    }
+  ]
+}

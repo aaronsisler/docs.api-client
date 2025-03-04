@@ -1,0 +1,16 @@
+meta {
+  name: Create-Users-Empty
+  type: http
+  seq: 21
+}
+
+post {
+  url: {{financial_data_provider_service_url}}/users
+  body: json
+  auth: none
+}
+
+body:json {
+  [
+  ]
+}

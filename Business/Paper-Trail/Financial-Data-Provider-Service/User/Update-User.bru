@@ -1,0 +1,20 @@
+meta {
+  name: Update-User
+  type: http
+  seq: 30
+}
+
+put {
+  url: {{financial_data_provider_service_url}}/users
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "userId": 1,
+    "username": "updated_username",
+    "firstName": "updated_firstName",
+    "lastName": "updated_lastName"
+  }
+}
