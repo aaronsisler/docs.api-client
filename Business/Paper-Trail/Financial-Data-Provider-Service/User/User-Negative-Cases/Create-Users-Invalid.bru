@@ -1,7 +1,7 @@
 meta {
-  name: Create-Users-Populated-Id
+  name: Create-Users-Invalid
   type: http
-  seq: 23
+  seq: 2
 }
 
 post {
@@ -13,7 +13,12 @@ post {
 body:json {
   [
     {
-      "username": "rawr_OVERRIDE_RUDE!!",
+      "1username": "new_1_user_1",
+      "firstName": "new_1",
+      "lastName": "user_1"
+    },
+    {
+      "1username": "new_1_user_1",
       "firstName": "new_1",
       "lastName": "user_1"
     }
