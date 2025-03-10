@@ -1,0 +1,22 @@
+meta {
+  name: Create-Households
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{financial_data_provider_service_url}}/households
+  body: json
+  auth: none
+}
+
+body:json {
+  [
+    {
+      "name": "new_household_1"
+    },
+    {
+      "name": "new_household_2"
+    }
+  ]
+}
