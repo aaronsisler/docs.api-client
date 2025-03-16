@@ -1,0 +1,16 @@
+meta {
+  name: Create-institutions-Empty
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{financial_data_provider_service_url}}/institutions
+  body: json
+  auth: none
+}
+
+body:json {
+  [
+  ]
+}

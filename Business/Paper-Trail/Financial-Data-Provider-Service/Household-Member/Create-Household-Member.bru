@@ -1,0 +1,18 @@
+meta {
+  name: Create-Household-Member
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{financial_data_provider_service_url}}/household-members
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "householdId": 2,
+    "userId": 3
+  }
+}

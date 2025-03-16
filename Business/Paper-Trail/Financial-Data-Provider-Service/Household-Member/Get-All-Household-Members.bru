@@ -1,0 +1,15 @@
+meta {
+  name: Get-All-Household-Members
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{financial_data_provider_service_url}}/household-members
+  body: none
+  auth: none
+}
+
+params:query {
+  ~userId: 2
+}

@@ -1,0 +1,22 @@
+meta {
+  name: Create-Institutions-Invalid
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{financial_data_provider_service_url}}/institutions
+  body: json
+  auth: none
+}
+
+body:json {
+  [
+    {
+      "1name": "new_1_institution_1"
+    },
+    {
+      "1name": "new_2_institution_2"
+    }
+  ]
+}
