@@ -1,0 +1,15 @@
+meta {
+  name: Get-All-Accounts
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{financial_data_provider_service_url}}/accounts
+  body: none
+  auth: none
+}
+
+params:query {
+  ~householdMemberId: 1
+}

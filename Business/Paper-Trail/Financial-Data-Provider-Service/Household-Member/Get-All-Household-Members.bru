@@ -5,11 +5,11 @@ meta {
 }
 
 get {
-  url: {{financial_data_provider_service_url}}/household-members
+  url: {{financial_data_provider_service_url}}/household-members?userId=1
   body: none
   auth: none
 }
 
 params:query {
-  ~userId: 2
+  userId: 1
 }
