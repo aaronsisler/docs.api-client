@@ -1,0 +1,15 @@
+meta {
+  name: Get-All-Account-Transactions
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{financial_data_provider_service_url}}/account-transactions
+  body: none
+  auth: none
+}
+
+params:query {
+  ~accountId: 1
+}

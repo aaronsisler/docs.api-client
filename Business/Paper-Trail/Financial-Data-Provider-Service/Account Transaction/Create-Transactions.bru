@@ -1,0 +1,21 @@
+meta {
+  name: Create-Account-Transctions
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{financial_data_provider_service_url}}/account-transactions
+  body: json
+  auth: none
+}
+
+body:json {
+  [
+    {
+      "accountId": 1,
+      "amount": 123,
+      "description": "Chipotle"
+    }
+  ]
+}
