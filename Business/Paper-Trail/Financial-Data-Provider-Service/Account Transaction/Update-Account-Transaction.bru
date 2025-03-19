@@ -1,0 +1,20 @@
+meta {
+  name: Update-Account-Transaction
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{financial_data_provider_service_url}}/account-transactions
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "id": 1,
+    "accountId": 147,
+    amount: 123,
+    "description": "updated_household_name"
+  }
+}
