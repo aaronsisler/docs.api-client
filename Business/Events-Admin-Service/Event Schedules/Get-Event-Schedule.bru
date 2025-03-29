@@ -5,14 +5,14 @@ meta {
 }
 
 get {
-  url: {{events_admin_service_url}}/clients/{{events_admin_service_client_id}}/event-schedules/{{events_admin_service_event_schedule_id}}
+  url: {{events_admin_service_url}}/clients/{{events_admin_service_establishment_id}}/event-schedules/{{events_admin_service_event_schedule_id}}
   body: none
   auth: none
 }
 
 vars:pre-request {
   events_admin_service_event_schedule_id: -update-event-schedule-event-schedule-id
-  events_admin_service_client_id: update-event-schedule-client-id
+  events_admin_service_establishment_id: update-event-schedule-client-id
   ~events_admin_service_event_schedule_id: -get-event-schedule-event-schedule-id
-  ~events_admin_service_client_id: get-event-schedule-client-id
+  ~events_admin_service_establishment_id: get-event-schedule-client-id
 }

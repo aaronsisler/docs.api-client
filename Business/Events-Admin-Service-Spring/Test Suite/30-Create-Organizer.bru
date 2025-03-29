@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: {{events_admin_service_url}}/clients/{{events_admin_service_client_id}}/organizers
+  url: {{events_admin_service_url}}/clients/{{events_admin_service_establishment_id}}/organizers
   body: json
   auth: none
 }
@@ -13,11 +13,11 @@ post {
 body:json {
   [
     {
-      "clientId": "{{events_admin_service_client_id}}",
+      "establishmentId": "{{events_admin_service_establishment_id}}",
       "name": "Owner of Bob's Pizza"
     },
     {
-      "clientId": "{{events_admin_service_client_id}}",
+      "establishmentId": "{{events_admin_service_establishment_id}}",
       "name": "Wife of Owner of Bob's Pizza"
     }
   ]

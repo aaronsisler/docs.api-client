@@ -5,14 +5,14 @@ meta {
 }
 
 put {
-  url: {{events_admin_service_url}}/clients/{{events_admin_service_client_id}}/locations
+  url: {{events_admin_service_url}}/clients/{{events_admin_service_establishment_id}}/locations
   body: json
   auth: none
 }
 
 body:json {
   {
-    "clientId": "{{events_admin_service_client_id}}",
+    "establishmentId": "{{events_admin_service_establishment_id}}",
     "locationId": "{{events_admin_service_location_id}}",
     "createdOn": "{{events_admin_service_location_created_on}}",
     "name": "Bob's Pizza"
@@ -22,5 +22,5 @@ body:json {
 vars:pre-request {
   events_admin_service_location_created_on: 2023-07-05T01:02:34
   events_admin_service_location_id: -update-location-mock-location-id
-  events_admin_service_client_id: update-location-mock-client-id
+  events_admin_service_establishment_id: update-location-mock-client-id
 }

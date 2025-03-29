@@ -5,11 +5,11 @@ meta {
 }
 
 get {
-  url: {{events_admin_service_url}}/clients/{{events_admin_service_client_id}}/locations
+  url: {{events_admin_service_url}}/clients/{{events_admin_service_establishment_id}}/locations
   body: none
   auth: none
 }
 
 vars:pre-request {
-  events_admin_service_client_id: get-all-locations-client-id
+  events_admin_service_establishment_id: get-all-locations-client-id
 }

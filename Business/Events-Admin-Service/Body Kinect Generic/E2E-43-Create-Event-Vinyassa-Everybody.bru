@@ -5,14 +5,14 @@ meta {
 }
 
 post {
-  url: {{events_admin_service_url}}/clients/{{events_admin_service_bk_client_id}}/events
+  url: {{events_admin_service_url}}/clients/{{events_admin_service_bk_establishment_id}}/events
   body: json
   auth: none
 }
 
 body:json {
   {
-    "clientId": "{{events_admin_service_bk_client_id}}",
+    "establishmentId": "{{events_admin_service_bk_establishment_id}}",
     "locationId": "{{events_admin_service_bk_location_id}}",
     "name": "Vinyasa for everybody",
     "description":"This class is suitable for everybody. Movement is so important for our bodies. Movement increases our metabolism, works on our immune system, stretches our fascia and muscles. Learn asanas and put them together with breath and movement for a full body experience.",

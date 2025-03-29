@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: {{events_admin_service_url}}/clients/{{events_admin_service_client_id}}/organizers
+  url: {{events_admin_service_url}}/clients/{{events_admin_service_establishment_id}}/organizers
   body: json
   auth: none
 }
@@ -13,18 +13,18 @@ post {
 body:json {
   [
     {
-      "clientId": "{{events_admin_service_client_id}}",
+      "establishmentId": "{{events_admin_service_establishment_id}}",
       "name": "Owner of Bob's Pizza"
     },
     {
-      "clientId": "{{events_admin_service_client_id}}",
+      "establishmentId": "{{events_admin_service_establishment_id}}",
       "name": "Wife of Owner of Bob's Pizza"
     }
   ]
 }
 
 vars:pre-request {
-  events_admin_service_client_id: 918106e4-4dd5-4fcc-8c22-4e54e2d69bbc
+  events_admin_service_establishment_id: 918106e4-4dd5-4fcc-8c22-4e54e2d69bbc
 }
 
 vars:post-response {

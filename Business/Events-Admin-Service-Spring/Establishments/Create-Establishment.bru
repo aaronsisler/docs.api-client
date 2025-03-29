@@ -1,0 +1,19 @@
+meta {
+  name: Create-Establishment
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{events_admin_service_url}}/establishments
+  body: json
+  auth: none
+}
+
+body:json {
+  [
+    {
+      "name": "Body Kinect"
+    }
+  ]
+}

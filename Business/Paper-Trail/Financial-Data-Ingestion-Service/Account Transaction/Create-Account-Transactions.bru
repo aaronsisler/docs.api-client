@@ -1,0 +1,46 @@
+meta {
+  name: Create-Account-Transctions
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{financial_data_ingestion_service_url}}/account-transactions
+  body: json
+  auth: none
+}
+
+body:json {
+  [
+    {
+      "accountId": 1,
+      "amount": 123,
+      "description": "Chipotle 1"
+    },
+    {
+      "accountId": 1,
+      "amount": 123,
+      "description": "Chipotle 2"
+    },
+    {
+      "accountId": 1,
+      "amount": 123,
+      "description": "Chipotle 3"
+    },
+    {
+      "accountId": 1,
+      "amount": 123,
+      "description": "Chipotle 4"
+    },
+    {
+      "accountId": 1,
+      "amount": 123,
+      "description": "Chipotle 5"
+    },
+    {
+      "accountId": 1,
+      "amount": 123,
+      "description": "Chipotle 6"
+    }
+  ]
+}

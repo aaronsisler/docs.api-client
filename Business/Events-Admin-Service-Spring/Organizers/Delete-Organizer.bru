@@ -5,12 +5,12 @@ meta {
 }
 
 delete {
-  url: {{admin_duties_url}}/clients/{{events_admin_service_client_id}}/organizers/{{events_admin_service_organizer_id}}
+  url: {{admin_duties_url}}/clients/{{events_admin_service_establishment_id}}/organizers/{{events_admin_service_organizer_id}}
   body: none
   auth: none
 }
 
 vars:pre-request {
   events_admin_service_organizer_id: 
-  events_admin_service_client_id: 
+  events_admin_service_establishment_id: 
 }

@@ -5,14 +5,14 @@ meta {
 }
 
 post {
-  url: {{events_admin_service_url}}/clients/{{events_admin_service_e2e_client_id}}/events
+  url: {{events_admin_service_url}}/clients/{{events_admin_service_e2e_establishment_id}}/events
   body: json
   auth: none
 }
 
 body:json {
   {
-    "clientId": "{{events_admin_service_e2e_client_id}}",
+    "establishmentId": "{{events_admin_service_e2e_establishment_id}}",
     "locationId": "{{events_admin_service_e2e_location_id}}",
     "organizerId": "{{events_admin_service_e2e_organizer_id}}",
     "name": "Event name from API client",

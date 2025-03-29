@@ -5,14 +5,14 @@ meta {
 }
 
 post {
-  url: {{events_admin_service_url}}/clients/{{events_admin_service_bk_client_id}}/organizers
+  url: {{events_admin_service_url}}/clients/{{events_admin_service_bk_establishment_id}}/organizers
   body: json
   auth: none
 }
 
 body:json {
   {
-    "clientId": "{{events_admin_service_bk_client_id}}",
+    "establishmentId": "{{events_admin_service_bk_establishment_id}}",
     "name": "Toni Midgett"
   }
 }

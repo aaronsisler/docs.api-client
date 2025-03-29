@@ -1,0 +1,15 @@
+meta {
+  name: Get-Establishment
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{events_admin_service_url}}/establishments/{{events_admin_service_establishment_id}}
+  body: none
+  auth: none
+}
+
+vars:pre-request {
+  events_admin_service_establishment_id: ede431ba-4181-4c94-ad0c-2a5f71fe3be0
+}
