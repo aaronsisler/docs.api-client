@@ -1,0 +1,27 @@
+meta {
+  name: Email -Beta
+  type: http
+  seq: 2
+}
+
+post {
+  url: https:services.eandbsolutions.com/beta/email
+  body: json
+  auth: inherit
+}
+
+headers {
+  Api-Version: 2
+}
+
+body:json {
+  {
+    "clientName": "E&B Solutions",
+    "emailAddress": "my.sisler.email@gmail.com",
+    "message": "Rawr 1",
+    "name": "Test",
+    "phoneNumber": "9106030899",
+    "pointOfContactEmail": "aaron.sisler@eandbsolutions.com",
+    "subject": "E&B Solutions: Contact Submission"
+  }
+}

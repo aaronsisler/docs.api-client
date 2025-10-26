@@ -1,0 +1,15 @@
+meta {
+  name: Grant Code
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{financial_data_ingestion_service_url}}/auth/grant-code?code
+  body: none
+  auth: inherit
+}
+
+params:query {
+  code: 
+}

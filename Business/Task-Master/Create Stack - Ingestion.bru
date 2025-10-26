@@ -1,0 +1,21 @@
+meta {
+  name: Create Stack - Ingestion
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://stack.otterandcow.com/stack
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "service_name": "financial-data-ingestion-service",
+    "service_short_name": "fin-data-ingestion-service",
+    "dns_prefix": "ingestion",
+    "cost_center_tag": "applications.paper-trail.financial-data-ingestion-service",
+    "domain_name": "otterandcow.com"
+  }
+}

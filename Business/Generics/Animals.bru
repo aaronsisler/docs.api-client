@@ -1,0 +1,17 @@
+meta {
+  name: Animals
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{generics_service_url}}/animals
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "animalType": "DOG"
+  }
+}

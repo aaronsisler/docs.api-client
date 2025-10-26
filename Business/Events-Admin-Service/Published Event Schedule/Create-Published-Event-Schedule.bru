@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: {{events_admin_service_url}}/clients/{{events_admin_service_establishment_id}}/published-event-schedules
+  url: {{events_admin_service_url}}/establishments/{{events_admin_service_establishment_id}}/published-event-schedules
   body: json
   auth: none
 }
@@ -14,12 +14,14 @@ body:json {
   {
     "establishmentId": "{{events_admin_service_establishment_id}}",
     "name": "2024-02 Published Event Schedule",
-    "eventScheduleYear": 2024,
-    "eventScheduleMonth": 2,
-    "eventScheduleId": "{{events_admin_service_event_schedule_id}}",
-    "locationBlackouts": [],
-    "eventBlackouts": []
+    "targetYear": 2025,
+    "targetMonth": 7,
+    "eventScheduleId": "{{events_admin_service_event_schedule_id}}"
   }
+}
+
+vars:pre-request {
+  events_admin_service_event_schedule_id: e9fa015e-3064-40d4-8166-73af5d49acee
 }
 
 vars:post-response {

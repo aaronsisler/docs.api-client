@@ -1,0 +1,21 @@
+meta {
+  name: Create Stack - Provider
+  type: http
+  seq: 3
+}
+
+post {
+  url: https://stack.otterandcow.com/stack
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "service_name": "financial-data-provider-service",
+    "service_short_name": "fin-data-provider-service",
+    "dns_prefix": "provider",
+    "cost_center_tag": "applications.paper-trail.financial-data-provider-service",
+    "domain_name": "otterandcow.com"
+  }
+}

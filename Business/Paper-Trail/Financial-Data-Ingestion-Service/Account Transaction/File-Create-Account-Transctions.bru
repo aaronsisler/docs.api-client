@@ -1,0 +1,21 @@
+meta {
+  name: File-Create-Account-Transctions
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{financial_data_ingestion_service_url}}/account-transactions
+  body: multipartForm
+  auth: none
+}
+
+body:multipart-form {
+  accountId: 1
+  file: @file(/Users/aaronsisler/Business/applications/paper-trail/financial-data-ingestion-service/app/src/test/resources/data/test.csv)
+  supportedInstitution: MANUAL
+  ~supportedInstitution: AMEX
+  ~file: @file(/Users/aaronsisler/Business/applications/paper-trail/financial-data-ingestion-service/app/src/test/resources/data/amex.csv)
+  ~file: @file(/Users/aaronsisler/Business/applications/paper-trail/financial-data-ingestion-service/app/src/test/resources/data/blank-fields.csv)
+  ~file: @file(/Users/aaronsisler/Business/applications/paper-trail/financial-data-ingestion-service/app/src/test/resources/data/empty.csv)
+}

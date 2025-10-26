@@ -1,0 +1,21 @@
+meta {
+  name: Email API-GW Local
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:4566/_aws/execute-api/nezd8grlr2/dev/email
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "header": {
+      "subject": "Maybe?",
+      "from": "aaron@gmail.com",
+      "to": "aaron@gmail.com"
+    }
+  }
+}

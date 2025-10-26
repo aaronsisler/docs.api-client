@@ -1,0 +1,18 @@
+meta {
+  name: Shape
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{generics_service_url}}/shapes
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "shape": "CIRCLE",
+    "area": 3
+  }
+}

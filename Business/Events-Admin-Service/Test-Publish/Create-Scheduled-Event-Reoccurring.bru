@@ -1,0 +1,33 @@
+meta {
+  name: Create-Scheduled-Event-Reoccurring
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{events_admin_service_url}}/event-schedules/{{events_admin_service_event_schedule_id}}/scheduled-events
+  body: json
+  auth: none
+}
+
+body:json {
+  [
+    {
+      "eventScheduleId": "{{events_admin_service_event_schedule_id}}",
+      "establishmentId": "{{events_admin_service_establishment_id}}",
+      "eventId": "{{events_admin_service_event_id}}",
+      "scheduledEventType": "RECURRING",
+      "scheduledEventInterval": "WEEKENDS",
+      "name": "Event name from API client",
+      "description": "Event description from API Client",
+      "category": "Event category from API Client",
+      "startTime": "13:45:42",
+      "endTime": "20:30:25",
+      "cost": 550
+    }
+  ]
+}
+
+vars:pre-request {
+  events_admin_service_event_id: Body Wisdom Meetup
+}

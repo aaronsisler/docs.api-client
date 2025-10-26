@@ -1,0 +1,22 @@
+meta {
+  name: Update-User
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{events_admin_service_url}}/users
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "userId": "2657b120-f0aa-4815-bf77-fcec79c0b773",
+    "name": "Aaron Sisler",
+    "establishmentIds": [
+      "add85611-a130-4a5d-a54b-5ba8c454816a"
+    ],
+    "createdOn": "2025-03-30T16:16:56.034006817"
+  }
+}

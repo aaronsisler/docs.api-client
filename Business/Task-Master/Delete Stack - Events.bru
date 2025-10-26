@@ -1,0 +1,15 @@
+meta {
+  name: Delete Stack - Events
+  type: http
+  seq: 4
+}
+
+delete {
+  url: https://stack.otterandcow.com/stack?stack_name=events-admin-service-stack
+  body: none
+  auth: none
+}
+
+params:query {
+  stack_name: events-admin-service-stack
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Delete Stack - Ingestion
+  type: http
+  seq: 5
+}
+
+delete {
+  url: https://stack.otterandcow.com/stack?stack_name=financial-data-ingestion-service-stack
+  body: none
+  auth: none
+}
+
+params:query {
+  stack_name: financial-data-ingestion-service-stack
+}

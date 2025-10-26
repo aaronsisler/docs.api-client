@@ -1,0 +1,30 @@
+meta {
+  name: Create-Published-Event-Schedule
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{events_admin_service_url}}/establishments/{{events_admin_service_establishment_id}}/published-event-schedules
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "establishmentId": "{{events_admin_service_establishment_id}}",
+    "name": "2024-02 Published Event Schedule",
+    "targetYear": 2025,
+    "targetMonth": 5,
+    "eventScheduleId": "{{events_admin_service_event_schedule_id}}"
+  }
+}
+
+vars:pre-request {
+  events_admin_service_event_schedule_id: 8d0bde57-699d-4578-8053-01fd6de5bff8
+}
+
+vars:post-response {
+  events_admin_service_published_event_schedule_id: res("publishedEventScheduleId")
+  events_admin_service_filename: res("filename")
+}

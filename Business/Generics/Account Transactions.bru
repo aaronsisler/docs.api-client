@@ -1,0 +1,24 @@
+meta {
+  name: Account Transactions
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{generics_service_url}}/accounts
+  body: multipartForm
+  auth: inherit
+}
+
+body:json {
+  {
+    "cardType": "AMEX"
+  }
+}
+
+body:multipart-form {
+  file: @file(/Users/aaronsisler/Business/projects/java/generics/app/src/test/resources/data/test.csv)
+  supportedInstitution: MANUAL
+  ~file: @file(/Users/aaronsisler/Business/projects/java/generics/app/src/test/resources/data/amex.csv)
+  ~supportedInstitution: AMEX
+}

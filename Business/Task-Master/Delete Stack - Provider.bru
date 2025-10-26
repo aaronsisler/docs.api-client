@@ -1,0 +1,15 @@
+meta {
+  name: Delete Stack - Provider
+  type: http
+  seq: 6
+}
+
+delete {
+  url: https://stack.otterandcow.com/stack?stack_name=financial-data-provider-service-stack
+  body: none
+  auth: none
+}
+
+params:query {
+  stack_name: financial-data-provider-service-stack
+}

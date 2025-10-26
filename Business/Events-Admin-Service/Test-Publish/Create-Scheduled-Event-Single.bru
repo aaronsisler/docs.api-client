@@ -1,0 +1,34 @@
+meta {
+  name: Create-Scheduled-Event-Single
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{events_admin_service_url}}/event-schedules/{{events_admin_service_event_schedule_id}}/scheduled-events
+  body: json
+  auth: none
+}
+
+body:json {
+  [
+    {
+      "category": "",
+      "description": "",
+      "endTime": "10:00:00",
+      "establishmentId": "{{events_admin_service_establishment_id}}",
+      "eventId": "Reiki Restorative Yoga Workshop",
+      "eventScheduleId": "{{events_admin_service_event_schedule_id}}",
+      "name": "Reiki Restorative Yoga Workshop",
+      "scheduledEventDate": "2025-07-24",
+      "scheduledEventDay": "",
+      "scheduledEventInterval": "",
+      "scheduledEventType": "SINGLE",
+      "startTime": "08:30:00"
+    }
+  ]
+}
+
+vars:pre-request {
+  events_admin_service_event_schedule_id: 3f459885-45a8-4654-8db3-0195eb715739
+}

@@ -11,23 +11,22 @@ post {
 }
 
 body:json {
-  {
-    "establishmentId": "{{events_admin_service_establishment_id}}",
-    "locationId": "{{events_admin_service_location_id}}",
-    "organizerId": "{{events_admin_service_organizer_id}}",
-    "name": "Event name from API client",
-    "description":"Event description from API Client",
-    "category": "Event category from API Client"
-  }
+  [
+    {
+      "establishmentId": "{{events_admin_service_establishment_id}}",
+      "locationId": "{{events_admin_service_location_id}}",
+      "organizerId": "{{events_admin_service_organizer_id}}",
+      "name": "Event name from API client",
+      "description": "Event description from API Client",
+      "category": "Event category from API Client"
+    }
+  ]
 }
 
 vars:pre-request {
-  ~events_admin_service_establishment_id: 
-  ~events_admin_service_location_id: 
-  ~events_admin_service_organizer_id: 
+  events_admin_service_establishment_id: base-client-id
 }
 
 vars:post-response {
-  events_admin_service_event_id: res("eventId")
-  events_admin_service_event_created_on: res("createdOn")
+  events_admin_service_event_id: res("eventId")[0]
 }

@@ -1,0 +1,20 @@
+meta {
+  name: Create Stack - Events
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://stack.otterandcow.com/stack
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "service_name": "events-admin-service",
+    "dns_prefix": "events-service",
+    "cost_center_tag": "applications.events-admin.events-admin-service",
+    "domain_name": "otterandcow.com"
+  }
+}

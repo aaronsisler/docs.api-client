@@ -1,0 +1,25 @@
+meta {
+  name: Create-Event-Schedule
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{events_admin_service_url}}/establishments/{{events_admin_service_establishment_id}}/event-schedules
+  body: json
+  auth: none
+}
+
+body:json {
+  [
+    {
+      "establishmentId": "{{events_admin_service_establishment_id}}",
+      "name": "Event Schedule: 2025 May",
+      "description": "Description for Event Schedule"
+    }
+  ]
+}
+
+vars:post-response {
+  events_admin_service_event_schedule_id: res("eventScheduleId")[0]
+}
