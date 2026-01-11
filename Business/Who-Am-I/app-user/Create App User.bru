@@ -1,0 +1,19 @@
+meta {
+  name: Create App User
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{who_am_i_service_url}}/app-users
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email1Address": "aaron.sisler@gmail.com",
+    "first1Name": "Aaron",
+    "lastName": "Sisler"
+  }
+}

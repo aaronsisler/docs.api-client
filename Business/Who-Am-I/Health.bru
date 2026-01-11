@@ -1,0 +1,11 @@
+meta {
+  name: Health
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{who_am_i_service_url}}/actuator/health
+  body: none
+  auth: none
+}
