@@ -1,0 +1,28 @@
+meta {
+  name: Email
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{stargate_url}}/{{stargate_env}}/email
+  body: json
+  auth: inherit
+}
+
+headers {
+  Api-Version: 2
+  ~X-Forwarded-For: 64.98.122.48
+}
+
+body:json {
+  {
+    "clientName": "E&B Solutions",
+    "emailAddress": "my.sisler.email@gmail.com",
+    "message": "Rawr ",
+    "name": "Test for environment: {{stargate_env}}",
+    "phoneNumber": "9106030899",
+    "pointOfContactEmail": "aaron.sisler@eandbsolutions.com",
+    "subject": "E&B Solutions: Contact Submission"
+  }
+}

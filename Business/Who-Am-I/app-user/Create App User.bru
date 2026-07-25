@@ -1,0 +1,23 @@
+meta {
+  name: Create App User
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{who_am_i_service_url}}/app-users
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "emailAddress": "aaron.sisler.1@eandbsolution.com",
+    "firstName": "Aaron",
+    "lastName": "Sisler"
+  }
+}
