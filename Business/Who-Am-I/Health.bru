@@ -6,6 +6,10 @@ meta {
 
 get {
   url: {{who_am_i_service_url}}/actuator/health
-  body: none
+  body: json
   auth: none
+}
+
+headers {
+  Content-Type: application/json
 }
